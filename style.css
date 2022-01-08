@@ -1,18 +1,18 @@
-  .gridContainer {
-     padding-top: 100px  ;
-    width: 900px;
-    margin: 0 auto;
+.gridContainer {
+  padding-top: 100px  ;
+ width: 900px;
+ margin: 0 auto;
 }
 .gridContainer .row .box{
-    height: 100px;
-    width: 100px;
+ height: 100px;
+ width: 100px;
 }
 
 .wrapper{
-  margin-left: 500px;
-  padding-top: 50px;
+margin-left: 500px;
+padding-top: 50px;
 }
 
 #resetPageBtn{
-    padding-top: 20px;
+ padding-top: 20px;
 }
