@@ -1,0 +1,15 @@
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    }
+
+.grid-container>div{
+    background: #eee;
+    padding:5em;
+}
+
+.grid-container>div:nth-child(odd){
+    background: #ddd;
+}
