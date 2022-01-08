@@ -1,15 +1,18 @@
-.grid-container {
-    display: inline-grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    }
-
-.grid-container>div{
-    background: #eee;
-    padding:5em;
+  .gridContainer {
+     padding-top: 100px  ;
+    width: 900px;
+    margin: 0 auto;
+}
+.gridContainer .row .box{
+    height: 100px;
+    width: 100px;
 }
 
-.grid-container>div:nth-child(odd){
-    background: #ddd;
+.wrapper{
+  margin-left: 500px;
+  padding-top: 50px;
+}
+
+#resetPageBtn{
+    padding-top: 20px;
 }
