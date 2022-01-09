@@ -80,3 +80,24 @@ box = document.querySelectorAll(".box");
 for (let i = 0; i < box.length; i++) {
   box[i].addEventListener("click", colorIt);
 }
+
+//fill all uncolored cells with the currently selected color
+colorUn.addEventListener("click", () => {
+  let options = document.querySelector("#white-box-color");
+  let box = document.querySelectorAll(".box");
+
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].selected) {
+      for (let j = 0; j < box.length; j++) {
+        if (
+          box[j].style.backgroundColor != "blue" &&
+          box[j].style.backgroundColor != "yellow" &&
+          box[j].style.backgroundColor != "red"
+        ) {
+          box[j].style.backgroundColor = options[i].value;
+        }
+      }
+      break;
+    }
+  }
+});
