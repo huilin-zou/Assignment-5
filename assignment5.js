@@ -24,6 +24,18 @@ a.addEventListener("click", function () {
   content.appendChild(newRow);
 });
 
+//delete rows
+const delRow = document.querySelector(".delRowBtn");
+
+delRow.addEventListener("click", function () {
+  if (content.children.length == 1) {
+    alert("error");
+    return;
+  }
+  let lastRow = content.children.length - 1;
+  content.removeChild(content.children[lastRow]);
+});
+
 //add columns
 const addCol = document.querySelector(".addColBtn");
 addCol.addEventListener("click", function () {
@@ -49,3 +61,5 @@ delCol.addEventListener("click", function () {
     row.removeChild(row.children[lastCol]);
   }
 });
+
+/////////////////////////////////////////////////////////////////////////////////////////
