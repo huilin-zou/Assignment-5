@@ -2,7 +2,6 @@
 
 const a = document.querySelector(".addRowBtn");
 const content = document.querySelector(".gridContainer");
-
 a.addEventListener("click", function () {
   const newRow = document.createElement("div");
   newRow.setAttribute("class", "row");
@@ -48,7 +47,6 @@ addCol.addEventListener("click", function () {
 
 //delete columns
 const delCol = document.querySelector(".delColBtn");
-
 delCol.addEventListener("click", function () {
   let numOfRow = content.children.length;
   if (content.children[numOfRow - 1].children.length == 1) {
@@ -62,27 +60,25 @@ delCol.addEventListener("click", function () {
   }
 });
 
-//click cell and changes color to selcetd one
-const colorIt = (e) => {
-  let options = document.getElementsByTagName("option");
-
-  for (let i = 0; i < options.length; i++) {
-    if (options[i].selected) {
-      e.target.style.backgroundColor = options[i].value;
-      break;
-    }
-  }
-};
-
-box = document.querySelectorAll(".box");
-
-//click event
+let box = document.querySelectorAll(".box");
 for (let i = 0; i < box.length; i++) {
-  box[i].addEventListener("click", colorIt);
+  box[i].addEventListener("click", clickToChangeColor);
+}
+
+//click cell and changes color to selcetd one
+function clickToChangeColor() {
+  let givingColor = document.querySelectorAll(".box");
+  const r = document.querySelector("#clickToChangeColor");
+
+  for (let i = 0; i < givingColor.length; i++) {
+    givingColor[i].addEventListener("click", function (e) {
+      e.target.style.backgroundColor = r.options[r.selectedIndex].value;
+    });
+  }
 }
 
 //fill all uncolored cells with the currently selected color
-colorUn.addEventListener("click", () => {
+whiteBoxColor.addEventListener("click", () => {
   let options = document.querySelector("#white-box-color");
   let box = document.querySelectorAll(".box");
 
@@ -98,6 +94,21 @@ colorUn.addEventListener("click", () => {
         }
       }
       break;
+    }
+  }
+});
+
+//fill all cells with the currently selected color
+let fillAllBtn = document.querySelector("#fillAll");
+fillAllBtn.addEventListener("click", function () {
+  let op = document.querySelector("#fillAll-select");
+  let box = document.querySelectorAll(".box");
+
+  for (let i = 0; i < op.length; i++) {
+    if (op[i].selected) {
+      for (let j = 0; j < box.length; j++) {
+        box[j].style.backgroundColor = op[i].value;
+      }
     }
   }
 });
