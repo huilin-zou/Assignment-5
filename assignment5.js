@@ -112,3 +112,28 @@ fillAllBtn.addEventListener("click", function () {
     }
   }
 });
+
+//click and hold (mouseover) from a single cell (start) to a different cell (end) such that
+// all affected/hovered-over cells from start to end change to the currently selected color
+function mouseoverChangeColor() {
+  let color = document.querySelectorAll(".box");
+  const drag = document.querySelector("#drag");
+
+  function mouseoverFunction(selectedColor) {
+    selectedColor.target.style.backgroundColor =
+      drag.options[drag.selectedIndex].value;
+  }
+
+  content.addEventListener("mousedown", function () {
+    for (let i = 0; i < color.length; i++) {
+      color[i].addEventListener("mouseover", mouseoverFunction);
+    }
+  });
+
+  content.addEventListener("mouseup", function () {
+    for (let i = 0; i < color.length; i++) {
+      color[i].removeEventListener("mouseover", mouseoverFunction);
+    }
+  });
+}
+mouseoverChangeColor();
