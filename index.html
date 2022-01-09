@@ -1,109 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 5</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <!--grid-->
     <div class="gridContainer">
-        <div class="row">
-            <div class="col-sm border border-dark box white"></div>
-            <div class="col-sm border border-dark box white"></div>
-            <div class="col-sm border border-dark box white"></div>
-        </div>
+      <div class="row">
+        <div class="col-sm border border-dark box white"></div>
+        <div class="col-sm border border-dark box white"></div>
+        <div class="col-sm border border-dark box white"></div>
+      </div>
 
-        <div class="row">
-            <div class="col-sm border border-dark box white"></div>
-            <div class="col-sm border border-dark box white"></div>
-            <div class="col-sm border border-dark box white"></div>
-        </div>
+      <div class="row">
+        <div class="col-sm border border-dark box white"></div>
+        <div class="col-sm border border-dark box white"></div>
+        <div class="col-sm border border-dark box white"></div>
+      </div>
 
-        <div class="row">
-            <div class="col-sm border border-dark box white"></div>
-            <div class="col-sm border border-dark box white"></div>
-            <div class="col-sm border border-dark box white"></div>
-
-        </div>
+      <div class="row">
+        <div class="col-sm border border-dark box white"></div>
+        <div class="col-sm border border-dark box white"></div>
+        <div class="col-sm border border-dark box white"></div>
+      </div>
     </div>
 
     <!--buttons-->
-       <div class="wrapper">
-            <div class="buttons">
-                <button type="button" class="addRowBtn">Add Row</button>
-                <button type="button" class="delRowBtn">Delete Row</button>
-                <button type="button" class="addColBtn">Add Column</button>
-                <button type="button" class="delColBtn">Delete Column</button>
-            </div>
+    <div class="wrapper">
+      <div class="buttons">
+        <button type="button" class="addRowBtn">Add Row</button>
+        <button type="button" class="delRowBtn">Delete Row</button>
+        <button type="button" class="addColBtn">Add Column</button>
+        <button type="button" class="delColBtn">Delete Column</button>
+      </div>
 
-<!--reset page button-->
-            <div id="resetPageBtn">
-                <button type="button" class="resetPageBtn" onClick="window.location.reload();">Reset Page</button>
-            </div>
+      <!--reset page button-->
+      <div id="resetPageBtn">
+        <button
+          type="button"
+          class="resetPageBtn"
+          onClick="window.location.reload();"
+        >
+          Reset Page
+        </button>
+      </div>
 
-            <!--change color option-->
-            <div>
-                <h6 class=py-2>Select from the following list and click on a box to change the color!</h6>
-                <form>
-                    <label for="">Choose a color:</label>
-                    <select name="" id="">
-                        <!-- Add more option values for different colors -->
-                        <option value="red">red</option>
-                        <option value="red">yellow</option>
-                        <option value="red">blue</option>
-                    </select>
-                </form>
-            </div>
+      <!--change color option-->
+      <div>
+        <h6 class="py-2">
+          Select from the following list and click on a box to change the color!
+        </h6>
+        <form>
+          <label for="color-label">Choose a color:</label>
+          <select id="color">
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+            <option value="blue">blue</option>
+          </select>
+        </form>
+      </div>
 
-            <!--change white boxes color option-->
-            <div class="">
-                <h6 class=py-2>Select a color and it will change all the <b>white</b> boxes to the color</h6>
-                <form>
-                    <label for="">Choose a color:</label>
-                    <select name="" id="">
-                        <option value="red">red</option>
-                        <option value="red">yellow</option>
-                        <option value="red">blue</option>
-                    </select>
-                    <button type="button" class=''>Fill all white boxes</button>
-                </form>
-            </div>
+      <!--change white boxes color option-->
+      <div class="">
+        <h6 class="py-2">
+          Select a color and it will change all the <b>white</b> boxes to the
+          color
+        </h6>
+        <form>
+          <label for="">Choose a color:</label>
+          <select name="" id="">
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+            <option value="blue">blue</option>
+          </select>
+          <button type="button" class="">Fill all white boxes</button>
+        </form>
+      </div>
 
-                <!--change all boxes color-->
-            <div class="">
-                <h6 class=py-2>Select a color and it will change ALL the boxes to the color</h6>
-                <form>
-                    <label for="">Choose a color:</label>
-                    <select name="" id="">
-                        <option value="red">red</option>
-                        <option value="red">yellow</option>
-                        <option value="red">blue</option>
-                    </select>
-                    <button type="button" class=''>Fill all boxes</button>
-                </form>
-            </div>
+      <!--change all boxes color-->
+      <div class="">
+        <h6 class="py-2">
+          Select a color and it will change ALL the boxes to the color
+        </h6>
+        <form>
+          <label for="">Choose a color:</label>
+          <select name="" id="">
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+            <option value="blue">blue</option>
+          </select>
+          <button type="button" class="">Fill all boxes</button>
+        </form>
+      </div>
 
-            <!--drag boxes-->
-            <div class="">
-                <h6 class=py-2>Select a color and then drag the color over the boxes to change them!</h6>
-                <form>
-                    <label for="">Choose a color:</label>
-                    <select name="" id="">
-                        <option value="red">red</option>
-                        <option value="red">yellow</option>
-                        <option value="red">blue</option>
-                    </select>
-                </form>
-            </div>
-   </div>
+      <!--drag boxes-->
+      <div class="">
+        <h6 class="py-2">
+          Select a color and then drag the color over the boxes to change them!
+        </h6>
+        <form>
+          <label for="">Choose a color:</label>
+          <select name="" id="">
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+            <option value="blue">blue</option>
+          </select>
+        </form>
+      </div>
+    </div>
 
-<script src="assignment5.js" ></script>
-</body>
-
+    <script src="assignment5.js"></script>
+  </body>
 </html>
