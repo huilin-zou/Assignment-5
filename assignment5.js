@@ -33,3 +33,19 @@ addCol.addEventListener("click", function () {
     content.children[i].appendChild(newCol);
   }
 });
+
+//delete columns
+const delCol = document.querySelector(".delColBtn");
+
+delCol.addEventListener("click", function () {
+  let numOfRow = content.children.length;
+  if (content.children[numOfRow - 1].children.length == 1) {
+    alert("error");
+    return;
+  }
+  let lastCol = content.children[numOfRow - 1].children.length - 1;
+  for (let i = 0; i < numOfRow; i++) {
+    let row = content.children[i];
+    row.removeChild(row.children[lastCol]);
+  }
+});
