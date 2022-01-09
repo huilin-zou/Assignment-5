@@ -62,4 +62,21 @@ delCol.addEventListener("click", function () {
   }
 });
 
-/////////////////////////////////////////////////////////////////////////////////////////
+//click cell and changes color to selcetd one
+const colorIt = (e) => {
+  let options = document.getElementsByTagName("option");
+
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].selected) {
+      e.target.style.backgroundColor = options[i].value;
+      break;
+    }
+  }
+};
+
+box = document.querySelectorAll(".box");
+
+//click event
+for (let i = 0; i < box.length; i++) {
+  box[i].addEventListener("click", colorIt);
+}
