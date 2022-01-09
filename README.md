@@ -17,3 +17,4 @@ This is another exercise to further demonstrate an understanding of HTML, CSS, J
 
 ## Work
 
+![gridGif](https://user-images.githubusercontent.com/56774880/148669602-09d0e175-4985-4b09-a718-40a9544e1bce.gif)
